@@ -95,6 +95,13 @@ function saveEditedPost(postId) {
     loadPostDetails();
 }
 
+//function to delete a post
+function deletePost(postId) {
+    const posts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+    localStorage.setItem("blogPosts", JSON.stringify(posts.filter(post => post.id !== parseInt(postId))));
+    window.location.href = "index.html";
+}
+
 //function to load specific post details
 function loadPostDetails() {
     const postId = new URLSearchParams(window.location.search).get("postId");
@@ -112,8 +119,13 @@ function loadPostDetails() {
         <h1 id="post-title">${post.title}</h1>
         <p class="date">Published on ${post.date}</p>
         <p id="post-content">${post.content}</p>
-        ${post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" style="max-width: 300px; width: 100%; border-radius: 8px; margin-top: 20px;">` : ""} 
-        <button onclick="enableEditMode(${post.id})">Edit Post</button>
+        ${post.imageUrl ? `<img src="${post.imageUrl}" alt="${post.title}" style="max-width: 300px; width: 100%; border-radius: 8px; margin-top: 20px;">` : ""}
+        
+        <!-- Button group for Edit and Delete buttons -->
+        <div class="button-group">
+            <button class="edit-button" onclick="enableEditMode(${post.id})">Edit Post</button>
+            <button class="delete-button" onclick="deletePost(${post.id})">Delete Post</button>
+        </div>
     `;
 }
 
