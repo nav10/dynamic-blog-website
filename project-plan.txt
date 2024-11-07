@@ -1,0 +1,7 @@
+Project Plan
+
+1. Clone repository to local machine
+2. Create 3 pages, index.html, new-post.html, and post.html
+3. Create script.js file to add JS functionality
+4. Create styles.css to add styling to pages to make it minimal and responsive 
+4. Push changes to git
