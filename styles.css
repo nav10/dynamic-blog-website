@@ -33,6 +33,123 @@ body {
     color: #ffffff;
 }
 
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/*styling for new post button */
+.create-post-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3a3ad0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-button:hover {
+    background-color: #2f2fa8;
+}
+
+/*form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #cccccc;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #33334d;
+    color: #f0f0f5;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+form div {
+    margin-bottom: 15px; 
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3a3ad0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="button"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0f0f5;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.go-back-button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #3a3ad0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*submit button styling */
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3a3ad0;
+    color: #f0f0f5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5757d9;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 600px) {
     body {
